@@ -178,3 +178,8 @@ body {
   padding-left: 0.25rem /* 4px */;
   color: var(--orange-yellow-crayola);
 }
+
+.status-message {
+  display: flex;
+  justify-content: center;
+}

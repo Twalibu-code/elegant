@@ -129,4 +129,4 @@ const pages = () => (
   </div>
 )
 
-export default pages
+export default pages;
