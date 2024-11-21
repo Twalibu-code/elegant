@@ -29,7 +29,6 @@ const form = () => {
       } catch (error) {
         setStatus('Error sending message.');
       }
-      alert(status);
     };
 
   return (
@@ -79,7 +78,7 @@ const form = () => {
                     <p className='form-button-text'>Send</p>
                 </button>
             </div>
-        </form> 
+        </form>
     </div>
   )
 }
