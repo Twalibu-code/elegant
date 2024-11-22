@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 
-const Form = () => {
+  const Form = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [status, setStatus] = useState('');
 
@@ -16,11 +16,12 @@ const Form = () => {
     e.preventDefault();
     setStatus('Sending...');
     try {
-      const response = await fetch('/api/send-email', {
+      const response = await fetch('/api/sendEmail', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
       });
+
       const data = await response.json();
       console.log(data);
       if (response.ok) {
@@ -30,7 +31,7 @@ const Form = () => {
         setStatus('Failed to send message.');
       }
     } catch (error) {
-      console.log('Error:', error);
+      console.error('Error:', error);
       setStatus('Error sending message.');
     }
   };
@@ -61,6 +62,7 @@ const Form = () => {
         <textarea
           type='text'
           id='message'
+          rows={3}
           name="message"
           value={formData.message}
           onChange={handleChange}
