@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import Form from "@/app/components/form";
+import ContactForm from "@/app/components/ContactForm";
 import React from 'react'
 
 const pages = () => (
@@ -122,7 +122,7 @@ const pages = () => (
 
         <div className='contacts_div2'>
           <header className='contacts-div-header'>Send me email</header>
-          < Form />
+          < ContactForm />
         </div>
       </section>
     </article>

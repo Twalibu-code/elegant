@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 
-  const Form = () => {
+const Form = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [status, setStatus] = useState('');
 
@@ -16,19 +16,18 @@ import Image from 'next/image';
     e.preventDefault();
     setStatus('Sending...');
     try {
-      const response = await fetch('/api/sendEmail', {
+      const response = await fetch('/api', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
       });
 
       const data = await response.json();
-      console.log(data);
       if (response.ok) {
         setStatus('Message sent successfully!');
         setFormData({ name: '', email: '', message: '' }); // Reset form
       } else {
-        setStatus('Failed to send message.');
+        setStatus(data.error || 'Failed to send message.');
       }
     } catch (error) {
       console.error('Error:', error);
@@ -41,7 +40,7 @@ import Image from 'next/image';
       <form id="contact-form" onSubmit={handleSubmit} className="form-frame">
         <input
           type="text"
-          id='name'
+          id="name"
           name="name"
           value={formData.name}
           onChange={handleChange}
@@ -51,7 +50,7 @@ import Image from 'next/image';
         />
         <input
           type="email"
-          id='email'
+          id="email"
           name="email"
           value={formData.email}
           onChange={handleChange}
@@ -60,8 +59,7 @@ import Image from 'next/image';
           required
         />
         <textarea
-          type='text'
-          id='message'
+          id="message"
           rows={3}
           name="message"
           value={formData.message}
@@ -85,7 +83,7 @@ import Image from 'next/image';
         </div>
       </form>
     </div>
-  )
+  );
 };
 
 export default Form;
