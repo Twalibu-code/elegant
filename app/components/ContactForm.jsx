@@ -16,7 +16,7 @@ const Form = () => {
     e.preventDefault();
     setStatus('Sending...');
     try {
-      const response = await fetch('/api', {
+      const response = await fetch('/api/sendEmail', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),

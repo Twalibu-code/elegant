@@ -50,8 +50,9 @@ export async function POST(req, res) {
     // Compose email
     const mailOptions = {
       from: email,
+      replyTo: email,
       to: process.env.RECEIVER_EMAIL,
-      subject: `New Contact Form Submission from ${name}`,
+      subject: `New Contact Form Submission from ${email}`,
       text: `
         Name: ${name}
         Message: ${message}
