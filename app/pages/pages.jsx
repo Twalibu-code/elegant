@@ -44,7 +44,7 @@ const pages = () => (
                 height={32}
                 className='pr-1'
               />
-              <p className='pl-1'>see location</p>
+              <p className='addr-socio-list'>see location</p>
             </a>            
           </div>
         </div>
@@ -60,7 +60,7 @@ const pages = () => (
                 height={32}
                 className='pr-1'
               />
-              <p className='pl-1'>pembetwalibu</p>
+              <p className='addr-socio-list'>pembetwalibu</p>
             </a>
 
             <a href='https://www.facebook.com/twalibu.pembe?mibextid=ZbWKwL' className='flex items-center mb-8'>
@@ -71,7 +71,7 @@ const pages = () => (
                 height={32}
                 className='pr-1'
               />
-              <p className='pl-1'>twalibu.pembe</p>
+              <p className='addr-socio-list'>twalibu.pembe</p>
             </a>
 
             <a href='https://www.linkedin.com/in/twalibu-pembe-843747256?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' className='flex items-center mb-8'>
@@ -82,7 +82,7 @@ const pages = () => (
                 height={32}
                 className='pr-1'
               />
-              <p className='pl-1'>twalibu-pembe</p>
+              <p className='addr-socio-list'>twalibu-pembe</p>
             </a>
 
             <a href='https://www.instagram.com/twalibu_pembe/profilecard/?igsh=MTJ4dmV1aHZ2ajZ1aA==' className='flex items-center mb-8'>
@@ -93,7 +93,7 @@ const pages = () => (
                 height={32}
                 className='pr-1'
               />
-              <p className='pl-1'>twalibu_pembe</p>
+              <p className='addr-socio-list'>twalibu_pembe</p>
             </a>
 
             <a href='https://www.tiktok.com/@twalibu_pembe?_t=8rGIFWr9EkJ&_r=1' className='flex items-center mb-8'>
@@ -104,7 +104,7 @@ const pages = () => (
                 height={32}
                 className='pr-1'
               />
-              <p className='pl-1'>twalibu_pembe</p>
+              <p className='addr-socio-list'>twalibu_pembe</p>
             </a>
 
             <a href='https://wa.me/+255783239834' className='flex items-center'>
@@ -115,7 +115,7 @@ const pages = () => (
                 height={32}
                 className='pr-1'
               />
-              <p className='pl-1'>+255 783 239 834</p>
+              <p className='addr-socio-list'>+255 783 239 834</p>
             </a>
           </div>
         </div>

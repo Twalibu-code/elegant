@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "version": "0.1.0",
+  "version": "0.2.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -31,5 +31,5 @@
   ],
   "author": "Twalibu Pembe",
   "license": "ISC",
-  "description": "This is the personal website decribe about Twalibu Pembe"
+  "description": "This is the personal website decribe about Twalibu Pembe, In this version 0.2.1 the feature added is email, people who visit wbsite can send email and delivered with name, email, title, and message"
 }

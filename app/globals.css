@@ -130,6 +130,16 @@ body {
   box-shadow: inset var(--vegas-gold-dim-2-inset);
 }
 
+.addr-socio-list {
+  padding-left: 0.25rem;
+}
+
+.addr-socio-list:hover {
+  color: var(--orange-yellow-crayola);
+  transition-duration: 0.5s;
+  box-shadow: inset var(--vegas-gold-dim-2-inset);
+}
+
 .form-frame {
   display: flex;
   margin: 1rem 0;
@@ -146,8 +156,8 @@ body {
   border-radius: 0.5rem;
   border-width: 1px;
   border-color: var(--jet) var(--jet-0) var(--jet-0) var(--jet);
-  padding: 1rem;
-  margin: 0 0 2rem;
+  padding: 0.5rem;
+  margin: 0 0 1.5rem;
   box-shadow: inset var(--shadow-2-inset);
 }
 

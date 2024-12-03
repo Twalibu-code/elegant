@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 
 const Form = () => {
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [formData, setFormData] = useState({ name: '', email: '',  title: '', message: '' });
   const [status, setStatus] = useState('');
 
   const handleChange = (e) => {
@@ -25,7 +25,7 @@ const Form = () => {
       const data = await response.json();
       if (response.ok) {
         setStatus('Message sent successfully!');
-        setFormData({ name: '', email: '', message: '' }); // Reset form
+        setFormData({ name: '', email: '', title: '', message: '' }); // Reset form
       } else {
         setStatus(data.error || 'Failed to send message.');
       }
@@ -58,13 +58,23 @@ const Form = () => {
           className="form-input"
           required
         />
+        <input
+          type="text"
+          id="title"
+          name="title"
+          value={formData.title}
+          onChange={handleChange}
+          placeholder="Title goes here"
+          className="form-input"
+          required
+        />
         <textarea
           id="message"
           rows={3}
           name="message"
           value={formData.message}
           onChange={handleChange}
-          placeholder="Your message"
+          placeholder="Your message here"
           className="form-input"
           required
         />
