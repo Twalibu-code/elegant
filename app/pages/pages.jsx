@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import ContactForm from "@/app/components/ContactForm";
+import Skills from './skills/skills'
 import React from 'react'
 
 const pages = () => (
@@ -24,7 +25,7 @@ const pages = () => (
 
     <article id='skills' className='page_frame'>
       <header className='page_header'>SKILLS</header>
-      <div></div>
+      <div>< Skills /></div>
     </article>
 
     <article id='contacts' className='page_frame'>
