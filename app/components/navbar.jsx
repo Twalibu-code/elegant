@@ -1,9 +1,9 @@
-import Image from 'next/image'
+import Image from 'next/image';
 
 const navbar = () => {
   return (
     <div>
-      <div className='flex bg-gradient-to-tr from-blue-400 to-green-500 justify-between items-center rounded-lg text-slate-50 font-bold py-4 px-8 shadow-2xl shadow-slate-900'>
+      <div className='flex bg-gradient-to-tr from-blue-400 to-green-500 justify-between items-center rounded-lg text-slate-50 font-bold py-4 px-8 my-4 shadow-2xl shadow-slate-900'>
         <Image
           src='/profile/TAP.jpg'
           alt='profile picture here'
@@ -22,4 +22,4 @@ const navbar = () => {
   )
 }
 
-export default navbar
+export default navbar;

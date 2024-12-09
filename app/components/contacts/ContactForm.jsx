@@ -1,9 +1,9 @@
-'use client';
-
+"use client"
+          
 import React, { useState } from 'react';
 import Image from 'next/image';
 
-const Form = () => {
+const ContactsForm = () => {
   const [formData, setFormData] = useState({ name: '', email: '',  title: '', message: '' });
   const [status, setStatus] = useState('');
   const [isSending, setIsSending] = useState(false);
@@ -107,4 +107,4 @@ const Form = () => {
   );
 };
 
-export default Form;
+export default ContactsForm;

@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useEffect, useState } from 'react';
-import './Skills.css'; // Custom CSS for styling
+import './Skills.css';
 
 const Skills = () => {
   const [progress, setProgress] = useState({
