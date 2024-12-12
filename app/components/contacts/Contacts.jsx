@@ -3,7 +3,8 @@ import Image from 'next/image';
 
 const Contacts = () => (
     <div>
-        <section className='flex justify-between'>
+        <header className='page_header'>CONTACTS</header>
+        <section className='flex justify-between gap-4'>
             <div className='contacts_div1'>
             <header className='contacts-div-header'>Address</header>
             <div className='addr-socio-frame'>
@@ -89,7 +90,7 @@ const Contacts = () => (
                     height={32}
                     className='pr-1'
                 />
-                <p className='addr-socio-list'>+255 783 239 834</p>
+                <p className='addr-socio-list'>T Λ P</p>
                 </a>
             </div>
             </div>

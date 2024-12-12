@@ -24,7 +24,7 @@ const submissionSchema = new mongoose.Schema({
     default: Date.now,
   },
 });
-const Submission = mongoose.model('Submission', submissionSchema);
+const EmailSubmissions = mongoose.model('EmailSubmissions', submissionSchema);
 
 // API handler
 export async function POST(req, res) {
@@ -69,7 +69,7 @@ export async function POST(req, res) {
     await transporter.sendMail(mailOptions);
 
     // Save submission to MongoDB
-    const newSubmission = new Submission({ name, email, message });
+    const newSubmission = new EmailSubmissions({ name, email, message });
     await newSubmission.save();
 
     return new Response(

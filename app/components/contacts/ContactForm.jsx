@@ -88,7 +88,7 @@ const ContactsForm = () => {
           className="form-input"
           required
         />
-        <div className="flex justify-between items-center mb-6">
+        <div className="flex justify-between items-center">
           <button type="submit" className="form-button">
             <Image
               src="/svg/send.svg"
