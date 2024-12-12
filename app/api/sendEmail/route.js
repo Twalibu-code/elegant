@@ -69,7 +69,7 @@ export async function POST(req, res) {
     await transporter.sendMail(mailOptions);
 
     // Save submission to MongoDB
-    const newSubmission = new EmailSubmissions({ name, email, message });
+    const newSubmission = new EmailSubmissions({ name, title, email, message });
     await newSubmission.save();
 
     return new Response(
