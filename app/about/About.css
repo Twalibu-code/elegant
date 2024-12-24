@@ -1,0 +1,75 @@
+:root {
+    --background-image: url('/images/sound.jpg');
+    --foreground: #171717;
+  
+     /* solid */
+    --jet: hsl(0, 0%, 24%);
+    --onyx-note: hsla(0, 1%, 16%);
+    --onyx: hsla(0, 1%, 16%, 0.7);
+    --white-1: hsl(0, 0%, 100%);
+    --white-2: hsl(0, 0%, 98%);
+    --eerie-black-1: hsla(240, 3%, 12%, 0.9);
+    --orange-yellow-crayola: hsl(45, 100%, 72%);
+    --vegas-gold: hsl(45, 54%, 58%);
+    --shadow-1: 12px 12px 32px hsla(0, 0%, 0%, 0.5);
+    --shadow-2: 8px 8px 32px hsla(0, 0%, 0%, 0.5);
+  }
+
+.about_frame {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 30px;
+    margin: 30px;
+    border-radius: 0.75rem;
+    border-color: var(--jet);
+    border-width: 1px;
+    box-shadow: var(--shadow-1);
+    background-color: var(--eerie-black-1);
+}
+
+.inside-about-frame {
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    padding: 16px 30px;
+    box-shadow: var(--shadow-2);
+    border-radius: 0.5rem;
+    border-width: 1px 0 0 1px;
+    border-color: var(--jet);
+    background-color: var(--onyx);
+}
+
+.about-div-header {
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+.recommendations-frame {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 33.3333%;
+    padding: 2rem 1rem 1rem;
+    margin: 0.25rem 0;
+    border-width: 1px;
+    border-radius: 0.5rem;
+    background-color: var(--jet-40);
+    border-color: var(--jet) var(--jet-0) var(--jet-0) var(--jet);
+}
+   
+.recommendations-frame:hover {
+    border-color: var(--vegas-gold);
+    box-shadow: inset var(--vegas-gold-dim-2-inset);
+}
+
+.recommender-name {
+    position: absolute;
+    font-weight: 300;
+    font-size: 1.5rem;
+    line-height: 16px;
+    margin-top: -1.25rem;
+    margin-left: 4rem;
+}

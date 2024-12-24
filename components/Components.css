@@ -1,0 +1,70 @@
+:root {
+    --orange-yellow-crayola: hsl(45, 100%, 72%);
+    --vegas-gold: hsl(45, 54%, 58%);
+}
+
+.contact-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 20px; /* Space from the bottom */
+    right: 20px;   /* Space from the left */
+    z-index: 9999; /* Ensure it appears above other elements */
+    background-color: var(--vegas-gold);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+}
+
+.contact-button:hover {
+    background-color: var(--orange-yellow-crayola);
+    color: #000;
+}
+
+.hire-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 100px; /* Space from the bottom */
+    right: 20px;   /* Space from the left */
+    z-index: 9999; /* Ensure it appears above other elements */
+    background-color: var(--vegas-gold);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+}
+
+.hire-button:hover {
+    background-color: var(--orange-yellow-crayola);
+    color: #000;
+}
+
+/* &&--Typing Animation--&& */
+.blinking-cursor {
+    display: inline-block;
+    width: 1ch;
+    background: currentColor;
+    animation: blink 0.7s step-start infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+  
+.typingAnimation {
+    color: var(--orange-yellow-crayola);
+}

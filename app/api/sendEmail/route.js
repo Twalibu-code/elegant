@@ -9,6 +9,7 @@ const uri = process.env.MONGO_URI;
 mongoose.connect(uri, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
+  serverSelectionTimeoutMS: 60000,
 })
 .then(() => console.log('Connected to MongoDB successfully'))
 .catch((err) => console.error('MongoDB connection error:', err));
@@ -52,7 +53,7 @@ export async function POST(req, res) {
       from: `"T Λ P - website" <no-reply@gmail.com>`,
       replyTo: email,
       to: process.env.RECEIVER_EMAIL,
-      subject: `${name.toUpperCase()} sent email from T Λ P - Website`,
+      subject: `${name.toUpperCase()} interacted with T Λ P - Website`,
       html: `
         <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; padding: 16px; background-color: #F9FAFB; border-radius: 8px;">
           <h2 style="font-size: 1rem; font-weight: bold; color: #1D4ED8;">${title}</h2>
