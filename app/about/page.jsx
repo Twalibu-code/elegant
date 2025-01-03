@@ -1,6 +1,86 @@
+'use client'
+
+import './About.css';
+import { useState } from 'react';
 import Image from 'next/image';
 import Navbar from '../../components/Navbar';
-import './About.css';
+
+const Timeline = () => {
+  const education = [
+    {
+      id: "cert001",
+      year: "2020 - 2024",
+      school: "University Of Dar-es-Salaam",
+      description: "Earned my Bachelor in Business Information Technology.",
+      certificate: "CV.pdf",
+    },
+    {
+      id: "cert002",
+      year: "2018 - 2020",
+      school: "Biharamulo Secondary School",
+      description: "Completed my high school education with a focus on science subjects.",
+      certificate: "Advance-Certificate.pdf",
+    },
+    {
+      id: "cert003",
+      year: "2014 - 2017",
+      school: "Bintimusa Secondary School",
+      description: "Completed my Ordinary Secondary Education level.",
+      certificate: "Olevel-Certificate.pdf",
+    },
+    {
+      id: "cert004",
+      year: "2007 - 2013",
+      school: "Kiwalani Primary School",
+      description: "Completed my primary school education as the basic education.",
+      certificate: "Primary-Certificate.pdf"
+    },
+  ];
+
+  const [onIframe, setOnIframe] = useState('');
+
+  const HandleClick = (e) => {
+    const { name } = e.target;
+    setOnIframe((prevClicked) => (prevClicked === name ? '' : name));
+  }
+
+  return (
+    <div className="timeline-container">
+      {education.map((item) => (
+        <div key={item.id} className='timeline'>
+          <div className="timeline-item">
+            <h3 className="text-xl font-medium">{item.school}</h3>
+            <span className="text1">{item.year}</span>
+            <p className="text2">{item.description}</p>
+            <iframe
+              src={onIframe === item.id ? `/docs/${item.certificate}` : null } //LAZY LOADING SETUP
+              title="Document Viewer"
+              className={`iframe ${onIframe === item.id ? 'expanded' : '' }`}
+            ></iframe>            
+          </div>
+          <div>
+            <button
+              type='button'
+              name={item.id}
+              onClick={HandleClick}
+              className='view-btn text4'
+            >
+              <Image
+                src="/svg/eye.svg"
+                alt="send icon"
+                width={32}
+                height={32}
+                className={`${onIframe === item.id ? '': 'hidden'}`}
+              />
+                { `${onIframe === item.id ? 'close' : item.certificate }` }
+            </button>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+};
+
 
 const About = () => {
   return (
@@ -10,104 +90,9 @@ const About = () => {
         <header className='page_header'>About</header>
         <div className='inside-about-frame'>
           <header className='about-div-header'>Education Background</header>
-          <section className='border rounded-lg border-red-700 p-4'>
-            <table className='w-full'>
-              <thead>
-                <tr className='border-b border-red-700'>
-                  <th className='w-2/12 text-start'>Period</th>
-                  <th className='w-5/12 text-start'>School/Institution</th>
-                  <th className='w-3/12 text-start'>Award</th>
-                  <th className='w-2/12 text-start'>Documents</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td className='align-top'>2020 - 2024</td>
-                  <td className='align-top flex flex-col gap-4'>
-                    <span>University of Dar es Salaam (UDSM)</span>
-                    <div>
-                      <span>Courses Enrolled in 1st Year</span>
-                      <ul className='list-disc list-inside'>
-                        <li>Principle of Accounting</li>
-                        <li>Proramming in C</li>
-                        <li>Development Perspectives I & II</li>
-                        <li>Principle of Microeconomics & Macroeconomics Analysis</li>
-                        <li>Introduction to Business</li>
-                        <li>Basic Statistics</li>
-                        <li>Business Computer Communication</li>
-                        <li>Principle and Practice of Management</li>
-                        <li>Introduction to Computer Network</li>
-                        <li>Web Programming</li>
-                        <li>Probability Theory I</li>
-                      </ul>
-                    </div>
-                    <div>
-                      <span>Courses Enrolled in 2nd Year</span>
-                      <ul className='list-disc list-inside'>
-                        <li>Computer Network Design and Administration</li>
-                        <li>Structured Systems Analysis and Design</li>
-                        <li>Data Abstraction and Algorithms</li>
-                        <li>Mobile Application Developments</li>
-                        <li>Principle of Database Systems</li>
-                        <li>Object Oriented Programming in Java</li>
-                        <li>Object Oriented Analysis and Design</li>
-                        <li>Business Law and Ethics</li>
-                        <li>Business Process Management</li>
-                        <li>Programming in R</li>
-                        <li>Operation Research I</li>
-                      </ul>
-                    </div>
-                    <div>
-                      <span>Courses Enrolled in 3rd Year</span>
-                      <ul className='list-disc list-inside'>
-                        <li>Priciples of Operating Systems</li>
-                        <li>Software Engineering</li>
-                        <li>IT Audit and Controls</li>
-                        <li>System Administration in Linux</li>
-                        <li>Environmental Management Information Systems</li>
-                        <li>Principles of Systems Security</li>
-                        <li>Artificial Intelligence</li>
-                        <li>Software Project Management</li>
-                        <li>Business Intelligence</li>
-                        <li>Enterprise Systems</li>
-                      </ul>
-                    </div>
-                  </td>
-                  <td className='align-top'>Bachelor Degree Certificate of Business Information Technology (BIT)</td>
-                  <td className='align-top'>hello</td>
-                </tr>
-                <tr>
-                  <td className='align-top'>2018 - 2020</td>
-                  <td className='align-top'>
-                    <span>Biharamulo Secondary School</span>
-                    <div>
-                      <span>I Studied the{' '}<strong>EGM</strong>{' '}combination, in Kagera region</span>
-                      <ul className='list-disc list-inside'>
-                        <li>Economics</li>
-                        <li>Geography</li>
-                        <li>Advanced Mathematics</li>
-                      </ul>
-                    </div>
-                  </td>
-                  <td className='align-top'>Advanced Certificate of Secondary Education Examination (ACSEE)</td>
-                  <td className='align-top'>hello</td>
-                </tr>
-                <tr>
-                  <td className='align-top'>2014 - 2017</td>
-                  <td className='align-top'>Bintimusa Secondary School</td>
-                  <td className='align-top'>Certificate of Secondary Education Examination (CSEE)</td>
-                  <td className='align-top'>hello</td>
-                </tr>
-                <tr>
-                  <td className='align-top'>2007 - 2013</td>
-                  <td className='align-top'>Kiwalani Primary School</td>
-                  <td className='align-top'>Certificate of Primary School Leaving Examination (PSLE)</td>
-                  <td className='align-top'>hello</td>
-                </tr>
-              </tbody>
-            </table>
-          </section>
+          < Timeline />
         </div>
+
         <div className='inside-about-frame'>
           <header className='about-div-header'>What Others Say About Me</header>
           <div className='flex flex-row gap-4 justify-between'>
@@ -120,8 +105,8 @@ const About = () => {
                 className='absolute rounded-xl -mt-14'
               />
               <span className='recommender-name'>Jeremia Charles</span>
-              <div className='border-t-2 mt-2 pt-1'>
-                <em>tuvutfvutfuvruvuiftvurfvufvfutvuufuivu hvfhvyrf ch fhf fur sifhueuifui8eu</em>
+              <div className='container border-t-2 mt-2 pt-1'>
+                <p className='text3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam deleniti, omnis ducimus aperiam fugit dolore veritatis in, nam similique, fugiat necessitatibus aut inventore quaerat velit praesentium. Repellat nobis rem eius.</p>
               </div>
             </div>
             <div className='recommendations-frame'>
@@ -134,7 +119,7 @@ const About = () => {
               />
               <span className='recommender-name'>Jeremia Charles</span>
               <div className='border-t-2 mt-2 pt-1'>
-                <em>tuvutfvutfuvruvuiftvurfvufvfutvuufuivu hvfhvyrf ch fhf fur sifhueuifui8eu</em>  
+                <p className='text3'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, in harum tempora ratione soluta architecto rerum, ea quae pariatur non, eum consequuntur ab iste mollitia odit blanditiis necessitatibus unde impedit!</p>  
               </div>
             </div>
             <div className='recommendations-frame'>
@@ -147,7 +132,7 @@ const About = () => {
               />
               <span className='recommender-name'>Jeremia Charles</span>
               <div className='border-t-2 mt-2 pt-1'>
-                <em>tuvutfvutfuvruvuiftvurfvufvfutvuufuivu hvfhvyrf ch fhf fur sifhueuifui8eu</em> 
+                <p className='text3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non ad perspiciatis vero voluptatibus recusandae quis soluta assumenda consequatur maxime architecto, incidunt asperiores libero dolorem molestias. Exercitationem facere ipsa qui voluptatibus!</p> 
               </div>
             </div>
           </div>

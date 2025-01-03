@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 27.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1"
+	 id="svg8" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:svg="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 398 192.5"
+	 style="enable-background:new 0 0 398 192.5;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;stroke:#000000;stroke-width:16;stroke-miterlimit:3;}
+	.st1{fill:#9B8989;stroke:#000000;stroke-width:16;stroke-miterlimit:11.3386;}
+	.st2{fill:#FFDB70;}
+</style>
+<inkscape:path-effect  effect="powerstroke" end_linecap_type="round" id="path-effect952" interpolator_beta="0.5" interpolator_type="CubicBezierFit" is_visible="true" linejoin_type="extrp_arc" miter_limit="4" offset_points="0,0.9403826 | 1,5 | 2,0.84579337" sort_points="true" start_linecap_type="round">
+	</inkscape:path-effect>
+<inkscape:path-effect  effect="simplify" helper_size="5" id="path-effect841" is_visible="true" simplify_individual_paths="false" simplify_just_coalesce="false" smooth_angles="0" steps="3" threshold="0.004">
+	</inkscape:path-effect>
+<g>
+	<path id="path845" class="st0" d="M199.7,16.6C133,16.6,69.6,45.7,26.1,96.3c43.5,51,107.2,80.4,174.3,80.5
+		c66.6-0.1,129.9-29.2,173.4-79.7C330.3,46.1,266.7,16.7,199.7,16.6z"/>
+	<circle id="path843" class="st1" cx="200.4" cy="96.9" r="79.9"/>
+	<circle id="path920" cx="200.4" cy="96.9" r="40.2"/>
+	<circle id="path954" class="st2" cx="187.2" cy="96.9" r="27"/>
+</g>
+</svg>

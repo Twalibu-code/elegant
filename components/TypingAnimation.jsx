@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import  './Components.css';
 
 const TypingAnimation = () => {
-  const words = ['Frontend Developer', 'Graphics Designer', 'Backend Developer', 'System Analyst'];
+  const words = ['Frontend Developer', 'System Designer', 'Backend Developer', 'Website Designer', 'System Analyst', 'Graphics Designer' ];
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
@@ -10,7 +10,7 @@ const TypingAnimation = () => {
   useEffect(() => {
     const currentWord = words[currentWordIndex];
     let typingSpeed = isDeleting ? 150 : 200; // Adjust typing/deleting speed
-
+    
     const typeEffect = setTimeout(() => {
       if (!isDeleting) {
         setDisplayedText((prev) => currentWord.substring(0, prev.length + 1));

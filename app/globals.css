@@ -53,6 +53,7 @@ html {
 
 body {
   padding: 0rem 6rem;
+  font-family: Arial, sans-serif;
   background-color: var(--smoky-1black);
 }
 
@@ -141,7 +142,7 @@ body {
 }
 
 .contacts-div-header {
-  font-weight: 400;
+  font-weight: 600;
   font-size: 1.5rem;
   line-height: 2rem;
 }
@@ -200,7 +201,7 @@ body {
 .form-button {
   display: flex;
   width: 33.333333%;
-  /* margin: 0 0 2rem; */
+  gap: 4px;
   padding: 0.5rem 0;
   align-items: center;
   justify-content: center;
@@ -216,7 +217,6 @@ body {
 }
 
 .form-button-text {
-  padding-left: 0.25rem /* 4px */;
   color: var(--orange-yellow-crayola);
 }
 

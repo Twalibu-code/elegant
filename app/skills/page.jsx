@@ -44,7 +44,7 @@ const Skills = () => {
           <header className='page_header'>Skills</header>
           <div className="inside-skills-frame">
             <div className='header-cvButton-frame'>
-              <h2>My Skills</h2>
+              <h2 className='skills-div-header' >My Skills</h2>
               <div>
                 <a 
                   href="/docs/CV.pdf" 
